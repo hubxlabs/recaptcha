@@ -1,3 +1,20 @@
+# Proxy support
+This is a fork of Google's PHP ReCAPTCHA client that allows you to pass cURL options, e.g. to proxy requests over Tor.
+
+```php
+$curl = new ReCaptcha\RequestMethod\CurlPost(null, null, [
+    CURLOPT_PROXY => 'http://127.0.0.1:9050/',
+    CURLOPT_PROXYTYPE => CURLPROXY_SOCKS5
+]);
+$recaptcha = new \ReCaptcha\ReCaptcha($secret, $curl);
+$resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp);
+if ($resp->isSuccess()) {
+    // verified!
+} else {
+    $errors = $resp->getErrorCodes();
+}
+```
+
 # reCAPTCHA PHP client library
 
 [![Build Status](https://travis-ci.org/google/recaptcha.svg)](https://travis-ci.org/google/recaptcha)
