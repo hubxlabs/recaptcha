@@ -1,13 +1,13 @@
 {
-    "name": "google/recaptcha",
-    "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+    "name": "toskadv/recaptcha",
+    "description": "Client library for reCAPTCHA with proxy support, a free service that protects websites from spam and abuse.",
     "type": "library",
     "keywords": ["recaptcha", "captcha", "spam", "abuse"],
     "homepage": "https://www.google.com/recaptcha/",
     "license": "BSD-3-Clause",
     "support": {
         "forum": "https://groups.google.com/forum/#!forum/recaptcha",
-        "source": "https://github.com/google/recaptcha"
+        "source": "https://github.com/toskadv/recaptcha"
     },
     "require": {
         "php": ">=5.5"
